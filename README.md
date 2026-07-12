@@ -11,7 +11,7 @@ docker run -p 3000:3000 -e SERVER_MESSAGE="Hello, World!" -e ROLLBAR_TOKEN="<you
 
 ## Requirements
 
-- Make.
+- Make
 
 ## Install
 
