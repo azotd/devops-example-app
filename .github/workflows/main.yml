@@ -6,7 +6,7 @@ on:
       - "main"
 
 env:
-  TEST_TAG: alkselsv/devops-example-app:test
+  TEST_TAG: azotd1/devops-example-app:test
 
 jobs:
   docker:
