@@ -21,6 +21,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Docker login
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build and export to Docker
         uses: docker/build-push-action@v2
@@ -44,9 +46,6 @@ jobs:
           context: .
           push: true
           tags: alkselsv/devops-example-app:latest
-      
-      - name: Verify Docker login
-        run: docker info
 
       - name: Build and push caddy
         uses: docker/build-push-action@v2
