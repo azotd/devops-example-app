@@ -44,6 +44,9 @@ jobs:
           context: .
           push: true
           tags: alkselsv/devops-example-app:latest
+      
+      - name: Verify Docker login
+        run: docker info
 
       - name: Build and push caddy
         uses: docker/build-push-action@v2
